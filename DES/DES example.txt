@@ -1,0 +1,3 @@
+Plaintext £º02468aceeca86420
+key£º0f1571c947d9e859
+ciphertext£ºda02ce3a89ecac3b
