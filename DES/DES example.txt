@@ -1,3 +1,4 @@
-Plaintext ��02468aceeca86420
-key��0f1571c947d9e859
-ciphertext��da02ce3a89ecac3b
+以下均为明文和密文在内存中的十六进制形式
+明文：02468aceeca86420
+密钥：0f1571c947d9e859
+密文：da02ce3a89ecac3b
