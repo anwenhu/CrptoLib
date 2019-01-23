@@ -1,4 +1,4 @@
 # CrptoLib
 中山大学信息安全基础课程实验作业/Experimental homework of information-security-basic course in SYSU.
 
-包含DES，AES，SHA等加密算法实现的实验性质的库，正在更新中。
+CrptoLib是一个较为简单的实验性质的加密算法库，包含DES,AES,MD5,SHA-512等常见加密方案的简单实现。
