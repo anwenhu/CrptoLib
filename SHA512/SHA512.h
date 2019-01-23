@@ -20,8 +20,8 @@ class SHA512
 
     string hexToBinary(string input);                              //hexToBinary: 十六进制输入转换为二进制
     string binToHexto(string input);                               //binToHexto: 二进制输入转换为十六进制
-    void print(unsigned long long int input);                                //print: 将unsigned int类型以32位二进制的形式输出
-    string convert(unsigned long long int input);                            //convert: 将unsigned int类型以32位二进制的形式字符串转化
+    void print(unsigned long long int input);                      //print: 将unsigned int类型以32位二进制的形式输出
+    string convert(unsigned long long int input);                  //convert: 将unsigned int类型以32位二进制的形式字符串转化
     string fillString(string input);                               //fillString: 该方法对原始输入的二进制序列进行填充                     
 
     void initDepart(string input,vector<string> &output);          //initDepart: 该方法将N*1024位的二进制字符串拆分为若干1024位的字符串数组
