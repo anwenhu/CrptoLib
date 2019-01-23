@@ -104,23 +104,24 @@ class AES
     private:
 
     uint_8 __plain[4][4], __enpt[4][4], __key[4][4];                   //plain, enpt, key: 最近的明文和密文，密钥
+    string __str_key;                                                  //__str_key: 十六进制原始密钥
     bool __flag;
 
     string hexToBinary(string input);                                  //hexToBinary: 十六进制输入转换为二进制
     string binToHexto(string input);                                   //binToHexto: 二进制输入转换为十六进制
-    void byteExchange(const uint_8 input[4][4],uint_8 output[4][4]);   //byteExchage:该方法实现字节代换操作
-    void deByteExchange(const uint_8 input[4][4],uint_8 output[4][4]); //deByteExchage:该方法实现逆字节代换操作
-    void rowShift(const uint_8 input[4][4],uint_8 output[4][4]);       //rowShift:该方法实现行移位操作
-    void deRowShift(const uint_8 input[4][4],uint_8 output[4][4]);     //deRowShift:该方法实现逆行移位操作
-    uint_8 gfMulti_2(uint_8 input,int exp);                            //gfMulti_2:该方法计算输入值和2的幂的GF(2^8)有限域乘法结果
-    uint_8 gfMulti(uint_8 a,uint_8 b);                                 //gfMulti:该方法计算输入值和任意值之间的GF(2^8)有限域乘法结果
-    void colMix(const uint_8 input[4][4],uint_8 output[4][4]);         //colMix:该方法实现列混合操作
-    void deColMix(const uint_8 input[4][4],uint_8 output[4][4]);       //deColMix:该方法实现逆列混合操作
-    void keyPlus(const uint_8 input[4][4],const uint_8 rolekey[4][4],uint_8 output[4][4]);    //keyPlus:该方法实现轮密钥加操作，其逆操作就是本身
-    void tTransform(const uint_8 input[4],uint_8 output[4],int col);                          //tTransform:该方法实现密钥生成过程中的T变换
+    void byteExchange(const uint_8 input[4][4],uint_8 output[4][4]);   //byteExchage: 该方法实现字节代换操作
+    void deByteExchange(const uint_8 input[4][4],uint_8 output[4][4]); //deByteExchage: 该方法实现逆字节代换操作
+    void rowShift(const uint_8 input[4][4],uint_8 output[4][4]);       //rowShift: 该方法实现行移位操作
+    void deRowShift(const uint_8 input[4][4],uint_8 output[4][4]);     //deRowShift: 该方法实现逆行移位操作
+    uint_8 gfMulti_2(uint_8 input,int exp);                            //gfMulti_2: 该方法计算输入值和2的幂的GF(2^8)有限域乘法结果
+    uint_8 gfMulti(uint_8 a,uint_8 b);                                 //gfMulti: 该方法计算输入值和任意值之间的GF(2^8)有限域乘法结果
+    void colMix(const uint_8 input[4][4],uint_8 output[4][4]);         //colMix: 该方法实现列混合操作
+    void deColMix(const uint_8 input[4][4],uint_8 output[4][4]);       //deColMix: 该方法实现逆列混合操作
+    void keyPlus(const uint_8 input[4][4],const uint_8 rolekey[4][4],uint_8 output[4][4]);    //keyPlus: 该方法实现轮密钥加操作，其逆操作就是本身
+    void tTransform(const uint_8 input[4],uint_8 output[4],int col);                          //tTransform: 该方法实现密钥生成过程中的T变换
     void keyExtend(const uint_8 input[4][4],uint_8 output[44][4]);                            //keyExtend:该方法实现密钥扩展操作
-    void _AES(const uint_8 input[4][4],const uint_8 key[4][4],uint_8 output[4][4]);      //AES:该方法对输入的4*4字节信息使用给定的4*4字节密钥进行AES加密
-    void _deAES(const uint_8 input[4][4],const uint_8 key[4][4],uint_8 output[4][4]);    //deAES:该方法对输入的4*4字节信息使用给定的4*4字节密钥进行AES解密
+    void _AES(const uint_8 input[4][4],const uint_8 key[4][4],uint_8 output[4][4]);      //AES: 该方法对输入的4*4字节信息使用给定的4*4字节密钥进行AES加密
+    void _deAES(const uint_8 input[4][4],const uint_8 key[4][4],uint_8 output[4][4]);    //deAES: 该方法对输入的4*4字节信息使用给定的4*4字节密钥进行AES解密
 };
 
 /********************* public functions *************************/
@@ -143,6 +144,7 @@ void AES::key(string key, string mode)
 
     //按照我们实现的密钥生成算法，密钥矩阵需要按行输入
     key=(mode=="0b")?binToHexto(key):key;
+    __str_key=key;
     int m=0;
     for(int i=0;i<4;i++)
     {
@@ -255,7 +257,8 @@ string AES::decrypt(string input, string inmode, string outmode)
 */
 string AES::getkey(string mode)
 {
-	
+	string res=(mode=="0b")?hexToBinary(__str_key):__str_key;
+    return res;
 }
 
 
