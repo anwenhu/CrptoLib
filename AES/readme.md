@@ -20,7 +20,7 @@
    > 3. 第三个参数的"0x"表示加密后的密文以十六进制返回，"0b"表示密文以二进制返回。
    
     string plain="0123456789abcdeffedcba9876543210";
-    enpt=aes.encrypt(plain,"0x","0x");
+    string enpt=aes.encrypt(plain,"0x","0x");
 
 
    ## 5. 使用decrypt方法进行AES解密。
@@ -29,7 +29,7 @@
    > 3. 第三个参数的"0x"表示解密后的明文以十六进制返回，"0b"表示明文以二进制返回。
    
     string enpt="0123456789abcdeffedcba9876543210";
-    plain=aes.decrypt(enpt,"0x","0x");
+    string plain=aes.decrypt(enpt,"0x","0x");
 
 
    ## 附注: 
