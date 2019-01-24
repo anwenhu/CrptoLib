@@ -11,7 +11,7 @@
    > 2. 第二个参数的"0x"表示密钥为十六进制，"0b"表示密钥为二进制。
    
     string key="0f1571c947d9e8590cb7add6af7f6798";   
-    AES.key(key,"0x");
+    aes.key(key,"0x");
 
 
    ## 4. 使用encrypt方法进行AES加密。
@@ -20,7 +20,7 @@
    > 3. 第三个参数的"0x"表示加密后的密文以十六进制返回，"0b"表示密文以二进制返回。
    
     string plain="0123456789abcdeffedcba9876543210";
-    enpt=AES.encrypt(plain,"0x","0x");
+    enpt=aes.encrypt(plain,"0x","0x");
 
 
    ## 5. 使用decrypt方法进行AES解密。
@@ -29,7 +29,7 @@
    > 3. 第三个参数的"0x"表示解密后的明文以十六进制返回，"0b"表示明文以二进制返回。
    
     string enpt="0123456789abcdeffedcba9876543210";
-    plain=AES.decrypt(enpt,"0x","0x");
+    plain=aes.decrypt(enpt,"0x","0x");
 
 
    ## 附注: 
