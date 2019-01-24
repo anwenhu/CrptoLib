@@ -1,17 +1,17 @@
 # DES加密模块
 
    ## 1. 引用头文件"DES.h"。
-   #include "DES.h"
+    #include "DES.h"
 
    ## 2. 创建一个DES对象。
-   DES DES=DES();
+    DES des=DES();
 
    ## 3. 使用key方法设置DES加密的密钥。
    > 1. key方法的第一个参数为十六进制或者二进制密钥；
    > 2. 第二个参数的"0x"表示密钥为十六进制，"0b"表示密钥为二进制。
    
     string key="0f1571c947d9e859";   
-    DES.key(key,"0x");
+    des.key(key,"0x");
 
 
    ## 4. 使用encrypt方法进行DES加密。
@@ -20,7 +20,7 @@
    > 3. 第三个参数的"0x"表示加密后的密文以十六进制返回，"0b"表示密文以二进制返回。
    
     string plain="02468aceeca86420";
-    enpt=DES.encrypt(plain,"0x","0x");
+    enpt=des.encrypt(plain,"0x","0x");
 
 
    ## 5. 使用decrypt方法进行DES解密。
@@ -29,7 +29,7 @@
    > 3. 第三个参数的"0x"表示解密后的明文以十六进制返回，"0b"表示明文以二进制返回。
    
     string enpt="02468aceeca86420";
-    plain=DES.decrypt(enpt,"0x","0x");
+    plain=des.decrypt(enpt,"0x","0x");
 
 
    ## 附注: 
