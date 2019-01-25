@@ -1,3 +1,10 @@
+/*****************************************************************
+*Module Name: DAA
+*Module Date: 2018-12-03
+*Module Auth: pzh
+*AEScription: Simple DAA module for get DAA Mac
+*****************************************************************/
+
 #include "DES.h"
 
 using namespace std;
