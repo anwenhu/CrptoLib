@@ -1,3 +1,10 @@
+/*****************************************************************
+*Module Name: SHA512
+*Module Date: 2018-11-28
+*Module Auth: pzh
+*AEScription: SHA hashing module
+*****************************************************************/
+
 #include <iostream>
 #include <string>
 #include <vector>
