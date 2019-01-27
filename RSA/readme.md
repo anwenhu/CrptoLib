@@ -8,7 +8,7 @@
 
    ## 3. 分别使用generatePubKey和generatePrivKey成员方法生成RSA加密的公钥(n,e)和私钥(n,d)
    > 1. generatePubKey成员方法返回生成的公钥(n,e)
-   > 2. generatePrivKey成员方法返回生成的公钥(n,d)
+   > 2. generatePrivKey成员方法返回生成的私钥(n,d)
     
     pubkey = rsa.generatePubKey()      #生成公钥pubkey=(n,e)
     privkey = rsa.generatePrivKey()    #生成私钥privkey=(n,d)
