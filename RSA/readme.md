@@ -26,4 +26,6 @@
      
     plain = rsa.decrypt(crpt)
    
+   ## 附注: 
+   > 1. example.py中提供了一个使用RSA模块进行加密和解密的完整示例。
 
