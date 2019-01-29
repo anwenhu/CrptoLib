@@ -1,4 +1,4 @@
-# DES加密模块
+# Elgamel模块
 
    ## 1. 引用头文件"Elgamel.py"
     #include "DES.h"
