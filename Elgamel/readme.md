@@ -6,11 +6,11 @@
    ## 2. 创建一个Elgamel发送方对象和Elgamel接收方对象
    > 1. 首先使用Elgamel类的默认初始化函数初始化Elgamel
    > 2. 使用类的receiveClient方法将对象设置为接收方对象，receiveClient方法将生成Elgamel体系中的共享参数q, a, Y，并根据这些共享参数将对象设置为接收方对象：
-    >> 参数列表：空
-    >> 返回值：(q, a, Y)，即生成的Elgamel密码体系中的由收发双方共享的参数
+   >> 参数列表：空
+   >> 返回值：(q, a, Y)，即生成的Elgamel密码体系中的由收发双方共享的参数
    > 3. 使用类的sendClient方法将对象设置为发送方对象，sendClient方法根据接收方设定的共享参数将对象设置为发送方对象：
-      >> 参数列表: 3个参数依次为q, a, Y，这些参数由接收方调用的receiveClient方法进行初始化
-      >> 返回值：空
+   >> 参数列表: 3个参数依次为q, a, Y，这些参数由接收方调用的receiveClient方法进行初始化
+   >> 返回值：空
     
     A = El.Elgamel()
     B = El.Elgamel()
