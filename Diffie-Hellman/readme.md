@@ -28,6 +28,6 @@
     keyb=B.getKey(Ya)
    
    ## 附注: 
-   > 1. example.py中提供了一个使用DH密钥交换模块的示例
+   > 1. example.py中提供了一个使用DH密钥交换模块的示例程序。
 
 
