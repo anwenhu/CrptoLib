@@ -15,37 +15,22 @@
     
     q, a, Y = B.receiveClient()
     A.sendClient(q,a,Y)
-    
 
-   ## 3. 使用key方法设置DES加密的密钥
-   > 1. key方法的第一个参数为十六进制或者二进制密钥。
-   > 2. 第二个参数的"0x"表示密钥为十六进制，"0b"表示密钥为二进制。
+   ## 3. 使用encrypt方法进行Elgamel加密
+   > 1. encrypt方法的参数为不大于共享参数q的十进制整数明文M
+   > 2. 返回值为加密后的密文对(C1, C2)，其中C1, C2均为十进制整数
    
-    string key="0f1571c947d9e859";   
-    des.key(key,"0x");
+    crpt = A.encrypt(plain)
 
 
-   ## 4. 使用encrypt方法进行DES加密。
-   > 1. encrypt方法的第一个参数为十六进制或者二进制明文。
-   > 2. 第二个参数的"0x"表示输入明文为十六进制，"0b"表示输入的明文为二进制。
-   > 3. 第三个参数的"0x"表示加密后的密文以十六进制返回，"0b"表示密文以二进制返回。
+   ## 4. 使用decipher方法进行Elgamel解密
+   > 1. decrypt方法的参数为Elgamel密文对(C1, C2)
+   > 2. 返回值为解密后的十进制整数明文和加密密钥key的元组(M, key)
    
-    string plain="02468aceeca86420";
-    string enpt=des.encrypt(plain,"0x","0x");
-
-
-   ## 5. 使用decrypt方法进行DES解密。
-   > 1. decrypt方法的第一个参数为十六进制或者二进制密文。
-   > 2. 第二个参数的"0x"表示输入密文为十六进制，"0b"表示输入的密文为二进制。
-   > 3. 第三个参数的"0x"表示解密后的明文以十六进制返回，"0b"表示明文以二进制返回。
-   
-    string enpt="02468aceeca86420";
-    string plain=des.decrypt(enpt,"0x","0x");
-
+    plain = B.decipher(crpt)
+    print("明文 = ", plain[0])
+    print("密钥 = ", plain[1])
 
    ## 附注: 
-   > 1. example.cpp中提供了一个使用DES模块加密和解密的完整示例。DES example.txt中提供了一个DES加密的"明文-密文-密钥"实例。
-   > 2. 本模块的明文/密文/密钥输入必须是16位长的十六进制或者64位长的二进制，其他如字符串需要首先转化为十六进制或者二进制再输入。
-   > 3. 若需要进行任意长度的字符串加密，请右转至本库的Pattern模块：
-       该模块整合了DES，AES两种分组密码，支持任意长度的字符串输入，并且支持以ECB, CBC, CFB, OFB, CTR五种工作模式进行加密和解密。
+   > 1. example.py中提供了一个使用DES模块加密和解密的完整示例。
 
