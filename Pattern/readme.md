@@ -43,4 +43,6 @@
     string result=pat0.decrypt(crpt0, key, vec, "0x");
     cout<<"ECB解密得到的密文="<<result<<endl<<endl;
 
+  ## 附注：
+  > 1. example.cpp中提供了一个使用该Pattern集成分组加密模块的示例。
   
