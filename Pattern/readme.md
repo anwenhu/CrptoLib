@@ -26,8 +26,8 @@
    > 5. 第四个参数为输出格式指定，取值为"0x"时指定输出密文格式为十六进制；取值为"0b"时指定输出密文格式为二进制。
    
     string plain="abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghab";
-	  string key="abcdefghabcdefgh";   //aes使用32位十六进制密钥，每个字母对应两位二进制 
-	  string vec="abcdefghabcdefgh";
+    string key="abcdefghabcdefgh";   //aes使用32位十六进制密钥，每个字母对应两位二进制 
+    string vec="abcdefghabcdefgh";
   
     string crpt0=pat0.encrypt(plain, key, vec, "0x");
     cout<<"ECB加密得到的密文="<<crpt0<<endl<<endl;
