@@ -1,4 +1,4 @@
-# Pattern分组加密模块
+# Pattern分组加密集成模块
 
    ## 1. 引用头文件"Pattern.h"
     #include "Pattern.h"
