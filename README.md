@@ -15,4 +15,5 @@ CrptoLib是一个较为简单的实验性质的加密算法库，包含《密码
 #### 9. HMAC：基于MD5和SHA512 Hash函数的消息认证码(MAC)模块
 #### 10. Pattern：分组加密集成模块，集成了AES, DES分组加密算法，并支持CBC, ECB, CTR, OCF, CFB五种分组密码的加密模式
 #### 11. HashCenter：Hash函数集成模块，集成了MD5, SHA512 Hash函数，并支持文件输入
+#### 12. Tradition：传统密码集成模块，集成了Caesar密码，仿射密码和Vigenere密码
 
