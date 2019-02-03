@@ -5,7 +5,7 @@
 
    ## 2. 创建一个Tradition对象
    > 1. Tradition类的对象可以进行默认初始化，即在初始化的时候无需提供任何的参数。
-   > 2. Tradition类包含Caesar，仿射，Vigenere三种经典加密算法，根据这三种加密算法的定义，其的明文和密文字符串中均要求仅含26个英文字母。
+   > 2. Tradition类包含Caesar，仿射，Vigenere三种经典密码的加密和解密实现，根据这三种加密算法的定义，其的明文和密文字符串中均要求仅含26个英文字母。
    
     Tradition trad;
     
